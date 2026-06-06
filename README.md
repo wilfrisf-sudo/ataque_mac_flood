@@ -61,10 +61,43 @@ Para contrarrestar la inundación y proteger la tabla de reenvío del switch, se
 ### 5.1 Mitigación Estricta: Acción de Apagado (Shutdown)
 Consiste en fijar la interfaz física en modo acceso, limitar el aprendizaje automático de direcciones MAC a una sola identidad legítima e indicar el apagado automático del puerto si ingresan tramas provenientes de direcciones de hardware desconocidas.
 
-```text
+
 SWI2# configure terminal
 SWI2(config)# interface Ethernet0/1
 SWI2(config-if)# switchport mode access
 SWI2(config-if)# switchport port-security
 SWI2(config-if)# switchport port-security maximum 1
 SWI2(config
+
+---
+
+## 6. Evidencias
+
+### 6.1. Demostración en Video
+En el siguiente enlace se encuentra el video demostrativo (máx. 5 minutos) donde se visualiza la topología con mi nombre y matrícula, la fecha y hora, la ejecución del ataque y la aplicación de la contramedida:  
+
+https://www.youtube.com/watch?v=eB26bVR1--8&list=PLGfNWxn7Di3BhsEEifmTJKXP4_U9fla7P&index=4
+
+### 6.2. Capturas de Pantalla
+
+**A. Diseño de la Topología en GNS3**
+
+<img width="466" height="498" alt="imagen" src="https://github.com/user-attachments/assets/0694040a-aef4-4330-933c-5ea6a041fe36" />
+
+**B.Tabla MAC sin ser atacada (Saturación de la CAM)**
+
+<img width="357" height="132" alt="imagen" src="https://github.com/user-attachments/assets/7c872e62-db83-4950-a728-210e089e96ee" />
+
+**C. Ejecución del Script en Kali Linux** 
+
+<img width="583" height="84" alt="imagen" src="https://github.com/user-attachments/assets/9ebc7da2-870e-4422-83d1-0ddb4c527783" />
+
+**D. Desbordamiento de la Tabla MAC (Saturación de la CAM)**
+
+<img width="511" height="580" alt="imagen" src="https://github.com/user-attachments/assets/011add14-9d7b-49b9-8c7d-333b50a847ba" />
+
+**E. Aplicación de Contramedidas**
+
+<img width="379" height="67" alt="imagen" src="https://github.com/user-attachments/assets/fcc08061-7c11-4ca6-b6da-96ef91db2e3d" />
+
+<img width="822" height="21" alt="imagen" src="https://github.com/user-attachments/assets/03048abb-1328-45d7-af33-c1dbd87ea810" />
